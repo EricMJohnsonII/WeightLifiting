@@ -1,0 +1,91 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script type="text/javascript">
+        function calc(){
+            var w = document.getElementById("weight").value;
+            var o = document.getElementById("calculations");
+            var text='';
+
+            if(w<=45){w="Bar only, no extra weight"}
+            else{w=w-45;}
+
+
+                if(w>=400)
+                {
+                    text = text + "<br> Two 100 lb per side";
+                    w = w - 400;
+                }
+
+                if(w>= 200)
+                {
+                    text = text + "<br> One 100 lb per side";
+                    w = w - 200;
+                }
+
+                if(w >= 180)
+                {
+                    text = text + "<br> Two 45 lb per side";
+                    w = w - 180;
+                }
+
+                if(w >= 90)
+                {
+                    text = text + "<br> One 45 lb per side";
+                    w = w - 90;
+                }
+
+                if(w >= 50)
+                {
+                    text = text + "<br> One 25 lb per side";
+                    w = w - 50;
+                }
+
+                if(w == 40)
+                {
+                    text = text +"<br> Two 10 lb per side";
+                    w = w - 40;
+                }
+
+                if(w >= 20)
+                {
+                    text = text + "<br> One 10 lb per side";
+                    w = w - 20;
+                }
+
+                if(w >= 10) {
+                    text = text + "<br> One 5 lb per side";
+                    w = w-10;
+                }
+
+                if(w == 5)
+                {
+                text = text + "<br> One 2 ½ lb per side";
+
+                }
+
+
+
+            o.innerHTML = text;
+            console.log(text);
+
+        }
+
+    </script>
+</head>
+<body>
+<form>
+<input type="text" onchange="calc();" id="weight">
+<input type="button" onclick="calc();" value="Calculate">
+</form>
+<div id="calculations">
+
+</div>
+
+
+
+</body>
+</html>
