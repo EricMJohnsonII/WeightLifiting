@@ -13,6 +13,11 @@
             if(w<=45){w="Bar only, no extra weight"}
             else{w=w-45;}
 
+                if(w>=600)
+                {
+                    text = text + "<br> Three 100 lb per side";
+                    w = w -600
+                }
 
                 if(w>=400)
                 {
